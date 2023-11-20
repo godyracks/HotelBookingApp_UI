@@ -1,0 +1,405 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"> <!-- Set a dark background color -->
+
+    <!-- Top Rectangle with MOMENTS -->
+    <RelativeLayout
+        android:id="@+id/topRectangle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#CCCCC">
+
+        <TextView
+            android:id="@+id/textViewMoments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOMENTS."
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="#f9bf3b"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="26dp"/>
+
+        <!-- Menu Lines on the right -->
+        <ImageView
+            android:id="@+id/imageViewMenuLines"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_menu_lines"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!-- Rectangle with Nyahururu text and icons -->
+    <RelativeLayout
+        android:id="@+id/rectangleNyahururu"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/topRectangle"
+        android:background="#CCCCC">
+
+        <TextView
+            android:id="@+id/textViewNyahururu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nyahururu"
+            android:textSize="40sp"
+            android:textColor="#fff"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="100dp"
+            android:layout_centerVertical="true"/>
+        <!-- Orange Search Icon -->
+
+
+
+        <!-- Vertical Line -->
+        <View
+            android:id="@+id/verticalLine"
+            android:layout_width="1dp"
+            android:layout_height="60dp"
+            android:background="#E0E0E0"
+            android:layout_toRightOf="@id/textViewNyahururu"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Category Filter Icon -->
+        <ImageView
+            android:id="@+id/imageViewCategoryFilter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_search_orange"
+            android:layout_toRightOf="@id/verticalLine"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_below="@id/textViewNyahururu"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#E0E0E0" />
+    </RelativeLayout>
+
+    <!-- Rectangle with "Best Places" and "All Category" -->
+    <RelativeLayout
+        android:id="@+id/rectangleBestPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rectangleNyahururu"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        android:background="#CCCCC"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textViewBestPlaces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="100dp"
+            android:text="Best Places"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+
+        <!-- Rectangle with "All Category" and chevron down -->
+        <RelativeLayout
+            android:id="@+id/rectangleAllCategory"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/textViewBestPlaces"
+            android:background="#CCCCC"
+            android:clipToOutline="true"
+            android:outlineProvider="bounds"
+            android:padding="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_white">
+
+                <TextView
+                    android:id="@+id/textViewAllCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="All Category"
+                    android:textColor="#FFFFFF" />
+
+
+                <ImageView
+                    android:id="@+id/imageViewChevronDown"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="110dp"
+                    android:src="@drawable/ic_chevron_down" />
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- HorizontalScrollView for Image Holders -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rectangleBestPlaces"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutImageHolders"
+            android:layout_width="wrap_content"
+            android:layout_height="390dp"
+            android:orientation="horizontal">
+
+            <!-- Image and text for the first hotel -->
+            <!-- Adjust the dimensions and images accordingly -->
+
+
+            <!-- Image and text for the first hotel -->
+            <!-- Adjust the dimensions and images accordingly -->
+            <RelativeLayout
+                android:id="@+id/rectangleImageHolder1"
+                android:layout_width="250dp"
+                android:layout_height="390dp"
+                android:layout_marginRight="2dp"> <!-- Add margin between images -->
+
+                <ImageView
+                    android:id="@+id/imageViewHotel1"
+                    android:layout_width="250dp"
+                    android:layout_height="260dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="18dp"
+
+                    android:layout_marginBottom="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pannari" />
+
+                <!-- Hotel name -->
+                <LinearLayout
+                    android:id="@+id/linearHotelName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageViewHotel1"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewHotelName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pannari resort"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star"
+                        android:layout_marginStart="54dp"
+                        android:layout_marginLeft="4dp" />
+
+                    <TextView
+                        android:id="@+id/textViewHotelRating1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.78"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <!-- Hotel location -->
+                <TextView
+                    android:id="@+id/textViewHotelLocation1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearHotelName1"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Nyahururu, KE"
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+                <!-- Hotel rating -->
+                <TextView
+                    android:id="@+id/textViewHotelPrice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewHotelLocation1"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="KES 15000/night"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <!-- Image and text for the second hotel -->
+            <!-- Adjust the dimensions and images accordingly -->
+            <RelativeLayout
+                android:id="@+id/rectangleImageHolder2"
+                android:layout_width="300dp"
+                android:layout_height="380dp"
+                android:layout_marginRight="16dp"> <!-- Add margin between images -->
+
+                <ImageView
+                    android:id="@+id/imageViewHotel2"
+                    android:layout_width="250dp"
+                    android:layout_height="260dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ktown" />
+
+                <!-- Hotel name -->
+                <LinearLayout
+                    android:id="@+id/linearHotelName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageViewHotel2"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewHotelName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laikipia County Lodge"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star"
+                        android:layout_marginStart="54dp"
+                        android:layout_marginLeft="4dp" />
+
+                    <TextView
+                        android:id="@+id/textViewHotelRating2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.78"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <!-- Hotel location -->
+                <TextView
+                    android:id="@+id/textViewHotelLocation2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearHotelName2"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Karuga, KE"
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+                <!-- Hotel rating -->
+                <TextView
+                    android:id="@+id/textViewHotelPrice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewHotelLocation2"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="KES 1000/night"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+
+            <!-- Add more RelativeLayouts for additional images -->
+
+        </LinearLayout>
+    </HorizontalScrollView>
+    <RelativeLayout
+        android:id="@+id/rectangleDiscover"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/horizontalScrollView"
+        android:background="#FFFFFF"
+        android:contentDescription="Discover section"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="14dp">
+
+        <!-- Background Image for Discover -->
+        <ImageView
+            android:id="@+id/imageViewDiscoverBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sarova_panafric"
+            android:scaleType="centerCrop"/>
+
+        <!-- Text overlay for Discover -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#80000000">
+
+            <TextView
+                android:id="@+id/textViewDiscover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discover"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewFindYourDreamPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find your dream place"
+                android:textColor="#FFFFFF"
+                android:layout_below="@id/textViewDiscover"
+                android:layout_marginTop="8dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Discover Section -->
+
+</RelativeLayout>
+
+</ScrollView>

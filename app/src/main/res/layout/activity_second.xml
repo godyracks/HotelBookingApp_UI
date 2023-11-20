@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222">
+
+    <!-- Back Arrow in the Top Left -->
+    <ImageView
+        android:id="@+id/arrowBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_arrow_back" />
+
+    <!-- Large Square for Hotel Image -->
+    <ImageView
+        android:id="@+id/largeHotelImage"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="300dp"
+        android:src="@drawable/pannari"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/arrowBack"/>
+
+    <!-- Small Squares for Thumbnail Images -->
+    <!-- Adjust the dimensions and images accordingly -->
+    <LinearLayout
+        android:id="@+id/thumbnailContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/largeHotelImage"
+        android:layout_marginTop="16dp">
+
+        <!-- Thumbnails -->
+        <ImageView
+            android:id="@+id/thumbnail1"
+            android:layout_width="10dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/bed1"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:layout_marginEnd="10dp"/>
+        <ImageView
+            android:id="@+id/thumbnail2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/bed2"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:layout_marginEnd="10dp"/>
+        <ImageView
+            android:id="@+id/thumbnail3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/bed3"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:layout_marginEnd="10dp"/>
+        <ImageView
+            android:id="@+id/thumbnail4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/bed4"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:layout_marginEnd="4dp"/>
+
+        <!-- Add three more ImageViews for other thumbnails -->
+
+    </LinearLayout>
+
+    <!-- Rectangle with Hotel Details -->
+    <RelativeLayout
+        android:id="@+id/hotelDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thumbnailContainer"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#333333">
+
+        <!-- Hotel Name and Location -->
+
+        <TextView
+            android:id="@+id/hotelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Pannari Resort"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hotelName"
+            android:text="Nyahururu, KE"
+            android:textColor="#CCCCCC" />
+
+        <!-- Star Rating -->
+        <ImageView
+            android:id="@+id/starIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/location"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="0dp"
+
+            android:src="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/starIcon"
+            android:text="4.78"
+            android:textColor="#CCCCCC" />
+
+
+        <!-- Thin Border Rectangle for Icons -->
+        <RelativeLayout
+            android:id="@+id/iconContainer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/starIcon"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border_white">
+
+            <!-- Icons Container (LinearLayout for evenly spaced icons) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- User Icon -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iconUser"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_user" />
+
+                    <TextView
+                        android:id="@+id/userCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iconUser"
+                        android:text="2"
+                        android:textColor="#FFFFFF" />
+                </RelativeLayout>
+
+                <!-- Couch Icon -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iconCouch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_couch" />
+
+                    <TextView
+                        android:id="@+id/couchCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iconCouch"
+                        android:text="1"
+                        android:textColor="#FFFFFF" />
+                </RelativeLayout>
+
+                <!-- Bathtub Icon -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iconBathtub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_bathtub" />
+
+                    <TextView
+                        android:id="@+id/bathtubCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iconBathtub"
+                        android:text="1"
+                        android:textColor="#FFFFFF" />
+                </RelativeLayout>
+
+                <!-- Wifi Icon -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iconWifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_wifi" />
+
+                    <TextView
+                        android:id="@+id/wifiCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iconWifi"
+                        android:text=""
+                        android:textColor="#FFFFFF" />
+                </RelativeLayout>
+
+                <!-- Dumbbell Icon -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iconDumbbell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_dumbbell" />
+
+                    <TextView
+                        android:id="@+id/dumbbellCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iconDumbbell"
+                        android:text=""
+                        android:textColor="#FFFFFF" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <!-- Description -->
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconContainer"
+            android:layout_marginTop="16dp"
+            android:text="The room loft has a very functional layout\n\nand coupled with unique architecture\n\nand modern finishes gives you the feel."
+            android:textColor="#FFFFFF"
+            android:gravity="start" />
+
+        <!-- Price and Book Now Button -->
+        <RelativeLayout
+            android:id="@+id/priceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/border_orange">
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="0dp"
+                android:text="KES 15000/night"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--Book now button-->
+            <TextView
+                android:id="@+id/bookNowButton"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="18dp"
+                android:background="#FFA500"
+                android:gravity="center"
+                android:text="Book Now"
+                android:textColor="#FFFFFF" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>
